@@ -48,7 +48,7 @@ echo "[INFO] -------------------------------------------------------------"
 echo "[INFO] Installing SASS for -MATERIALIZECSS- (via RUBY) ..."
 echo "[INFO]"
 
-gem install sass
+sudo gem install sass
 
 echo "[INFO]"
 echo "[INFO] -------------------------------------------------------------"
