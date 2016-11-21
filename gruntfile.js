@@ -9,7 +9,7 @@ module.exports = function(grunt) {
             },
             build: {
                 src: [
-                    'js/vendor/jquery/jquery1111min.js',
+                    'node_modules/jquery/dist/jquery.min.js',
                     //'js/vendor/check_radio/icheck.js',
                     //'js/vendor/datepicker/bootstrap-datepicker.js',
                     //'js/vendor/inViewport/jquery.onscreen.js',
@@ -22,8 +22,7 @@ module.exports = function(grunt) {
                     //'js/vendor/progressbar/linear/bootstrap-progressbar.js',
                     //'js/vendor/scrollbars/jquery.mCustomScrollbar.js',
                     //'js/vendor/range/ion.rangeSlider.js',
-                    'js/vendor/material/materialize.js',
-                    'js/vendor/ie/*.js'
+                    'js/vendor/material/materialize.js'
                 ],
                 dest: 'js/vendor.min.js'
             }
