@@ -176,16 +176,19 @@ strong, b{font-weight: 700;}
 /*-- GENERATE FONTSIZE CALL --*/
 .generate_lineHeight();
 
-/*-- GENERIC FONTSIZE --*/
-.make-lineHeight(lh);
+.line_height_enabled(@line_height_enabled) when (@line_height_enabled = true) {
+  /*-- GENERIC FONTSIZE --*/
+  .make-lineHeight(lh);
 
-/*-- SM FONTSIZE --*/
-@media (min-width: @sm_from) and (max-width: @sm_to) {
-  .make-lineHeight(sm_lh);
+  /*-- SM FONTSIZE --*/
+  @media (min-width: @sm_from) and (max-width: @sm_to) {
+    .make-lineHeight(sm_lh);
+  }
+
+  /*-- XS FONTSIZE --*/
+  @media (min-width: @xs_from) and (max-width: @xs_to) {
+    .make-lineHeight(xs_lh);
+  }
 }
 
-/*-- XS FONTSIZE --*/
-@media (min-width: @xs_from) and (max-width: @xs_to) {
-  .make-lineHeight(xs_lh);
-}
-
+.line_height_enabled(@enable_line_height);
