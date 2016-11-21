@@ -60,18 +60,34 @@ module.exports = function(grunt) {
                 }
             }
         },
+        imagemin: {                          // Task
+            dynamic: {                         // Target
+                options: {                       // Target options
+                    optimizationLevel: 3,
+                    progressive: true
+                },
+                files: [{
+                    expand: true,                  // Enable dynamic expansion
+                    cwd: 'img/src/',                   // Src matches are relative to this path
+                    src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+                    dest: 'img/dist/'                  // Destination path prefix
+                }]
+            }
+        },
         watch: {
             files: [
                 'js/vendor/**/*.js',
                 "vendor/materialize/sass/**/*",
                 "less/**/*",
+                "img/src/**/*",
                 "gruntfile.js"
             ],
             tasks: [
                 "uglify",
                 "sass",
                 "less",
-                "cssnano"
+                "cssnano",
+                ['newer:imagemin']
             ]
         }
     });
@@ -81,6 +97,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.loadNpmTasks('grunt-cssnano');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-newer');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Default task(s).
