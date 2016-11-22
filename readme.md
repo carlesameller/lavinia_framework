@@ -28,7 +28,9 @@ Materializecss "optional for forms" (http://materializecss.com/)
 
 ## Dependencies
 grunt
+
 ruby (if materializecss enabled)
+
 sass (if materializecss enabled)
 
 ##### IE
@@ -39,9 +41,15 @@ sass (if materializecss enabled)
 
 ## Grunt
 [grunt-contrib-imagemin](https://github.com/gruntjs/grunt-contrib-imagemin)
+
 [grunt-contrib-less](https://github.com/gruntjs/grunt-contrib-less)
+
 [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass)
+
 [grunt-contrib-uglify](https://github.com/gruntjs/grunt-contrib-uglify)
+
 [grunt-contrib-watch](https://github.com/gruntjs/grunt-contrib-watch)
+
 [grunt-cssnano](https://github.com/sindresorhus/grunt-cssnano)
+
 [grunt-newer](https://github.com/tschaub/grunt-newer)
