@@ -11,10 +11,10 @@ $app['debug'] = true;
 
 $app->get('/', function() use($app) {
 	return $app['twig']->render('index.twig');
-});
+})->bind('home');
 
 $app->get('/page02', function() use($app) {
 	return $app['twig']->render('page02.twig');
-});
+})->bind('page02');
 
 $app->run();
